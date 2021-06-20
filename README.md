@@ -12,4 +12,4 @@
 
 ## Failed to implement
 
-# Using zoom, OBS studio and opencv at the same time produce very lagging video which would not be able to use as a fake zoom meeting
+# Using zoom, OBS studio and opencv at the same time produce lagging video which would not be able to use as a fake zoom meeting

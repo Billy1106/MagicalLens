@@ -1,0 +1,50 @@
+GUIWidget:
+
+<GUIWidget>
+    canvas.before:
+        Color:
+            rgba: 0.6,0.6,0.6,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'horizontal'
+        size: root.size
+
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                id: Stop
+                text: "Stop"
+                front_size:30
+                on_press:root.halt()
+            Button:
+                id: ChangeColor
+                text: "Change Color"
+                front_size:30
+                on_press:root.changeColor()
+            BoxLayout:
+                Button:
+                    id: Start
+                    text: "Start"
+                    front_size:30
+                    on_press:root.start()
+                Button:
+                    id: Exit
+                    text: "Exit"
+                    front_size:30
+                    on_press:root.exit()
+        BoxLayout:
+            orientation:'vertical'
+            Slider:
+                id: slider
+                max: 60
+                min: 1
+                step: 1
+                orientation: 'vertical'
+                on_value: root.changeFPS(*args)
+            
+            Label : 
+                text: "FPS : {}".format(61 - slider.value)
+                font_size: 30
+
